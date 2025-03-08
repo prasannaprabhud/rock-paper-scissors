@@ -1,0 +1,11 @@
+
+
+
+
+GIT COMMITS
+This was my rock paper scissors Console version v1.0
+
+It was taken me 2 days to complete.
+- Day 1 : pseudocode  and logic stuff
+- Day 2 : The whole code was written 
+- Day 3 : today, git commit day

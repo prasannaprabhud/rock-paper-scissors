@@ -1,0 +1,266 @@
+ const choices = ['rock', 'paper', 'scissors'];
+
+        function getHumanChoice(){
+            const user = prompt('Enter your choices ', 'rock paper scissors');
+            console.log(`user : ${user}`);
+            return user.toLowerCase();
+        }
+
+
+        function getRandom(){
+            let randomNumber =  Math.floor(Math.random() * 3);
+            // console.log(`randomNumber : ${randomNumber}`);
+            return randomNumber;
+        }
+
+        function getComputerChoice(){
+            let computerChoice = choices[getRandom()];
+            // console.log(`computerChoice : ${computerChoice}`);
+            return computerChoice;
+        }
+
+
+        let user1 = getHumanChoice();
+        let comp = getComputerChoice();
+        let logic1 = user1 === comp;
+        let round = 5;
+        let humanScore = 0;
+        let computerScore = 0;
+        
+
+
+        function playground(){
+            if(logic1 == true ){
+            console.log(`Match draws `);
+            } else if ( user1 === 'rock' && comp === 'scissors' || 
+                        user1 === 'paper' && comp === 'rock'    || 
+                        user1 === 'scissors' && comp === 'paper'){
+                console.log(`You won, ${user1} beats ${comp}. `);
+                humanScore++;
+            }else if (user1 === 'scissors' && comp === 'rock' ||
+                      user1 === 'rock' && comp === 'paper'    ||
+                      user1 === 'paper' && comp === 'scissors'){
+                console.log(`AI won, ${comp} beats ${user1}. `);
+                computerScore++;
+            }else{
+                console.log(`try next time`);     
+            } 
+        }
+
+
+       // for (let i = 0; i < 3; i++) {
+
+        // for (let j = 0; j < 3; j++) {
+        //     playground();
+        // }
+        // }
+
+        // alert('Done!');
+
+        // playground();
+
+        // for (let i = 0; i < 3; i++) {
+        //         getHumanChoice();
+        //         }
+
+       
+        // SCORE
+        // YOU WON THE MATCH
+
+        // let i = 0;
+        // while (i < 3) { // shows 0, then 1, then 2
+        //     playground();
+        // // alert( playground() );
+        // // console.log('hello');
+        // i++;
+        // }
+
+        // let i = 0;
+        // while(i > 5){
+        //     console.log('hello');
+        //     i++;
+        // }
+
+        // for (let i = 0; i > 5; i++){
+        //   console.log('hello');
+        //  }
+
+
+
+        // function playRound(humanChoice, computerChoice) {
+        // // your code here!
+        // }
+
+        // const humanSelection = getHumanChoice();
+        // const computerSelection = getComputerChoice();
+
+        // playRound(humanSelection, computerSelection);
+
+
+        // round = 5
+        // 
+
+        // 'rock', 'paper', 'scissors'
+        // rock > scissors
+        // paper > rock
+        // scissors > paper
+        // rock == rock
+
+        // function playground(){
+        //     if (choices[0] > choices[2]){
+        //         console.log(`${choices[0]} beats ${choices[2]}`);
+        //     } else if(choices[1] > choices[2]) {
+        //         console.log(`${choices[1]} beats ${choices[2]}`);
+        //     } else if(choices[2] > choices[1]) {
+        //         console.log(`${choices[2]} beats ${choices[1]}`);
+        //     } else{
+        //         console.log(`draws`);
+        //     }
+        // }
+ 
+        // playground();
+
+
+
+        
+        // if(logic1 == true ){
+        //     console.log(`Match draws `);
+        // } else if (user1 == 'rock' && getComputerChoice() == 'scissors'){
+        //     console.log('You won, ${user1} beats ${getComputerChoice()}. ');
+        // }else if (user1 == 'paper' && getComputerChoice() == 'rock'){
+        //     console.log('You won, ${user1} beats ${getComputerChoice()}. ');
+        // }else if (user1 == 'scissors' && getComputerChoice() == 'paper'){
+        //     console.log('You won, ${user1} beats ${getComputerChoice()}. ');
+        // }else if (user1 == 'scissors' && getComputerChoice() == 'rock'){
+        //     console.log('AI won, ${getComputerChoice()} beats ${user1}. ');
+        // }else if (user1 == 'rock' && getComputerChoice() == 'paper'){
+        //     console.log('AI won, ${getComputerChoice()} beats ${user1}. ');
+        // }else if (user1 == 'scissors' && getComputerChoice() == 'paper'){
+        //     console.log('AI won, ${getComputerChoice()} beats ${user1}. ');
+        // }else{
+        //     console.log(`try next time`);
+        // }
+
+
+        // function playground(){
+        //     if(logic1 == true ){
+        //     console.log(`Match draws `);
+        //     } else if (user1 === 'rock' && comp === 'scissors'){
+        //         console.log(`You won, ${user1} beats ${comp}. `);
+        //     }else if (user1 === 'paper' && comp === 'rock'){
+        //         console.log(`You won, ${user1} beats ${comp}. `);
+        //     }else if (user1 === 'scissors' && comp === 'paper'){
+        //         console.log(`You won, ${user1} beats ${comp}. `);
+        //     }else if (user1 === 'scissors' && comp === 'rock'){
+        //         console.log(`AI won, ${comp} beats ${user1}. `);
+        //     }else if (user1 === 'rock' && comp === 'paper'){
+        //         console.log(`AI won, ${comp} beats ${user1}. `);
+        //     }else if (user1 === 'paper' && comp === 'scissors'){
+        //         console.log(`AI won, ${comp} beats ${user1}. `);
+        //     }else{
+        //         console.log(`try next time`);
+        //     } 
+        // }
+
+
+        // for (let i = 0; i < 5; i++){
+        // let playRound = playground(); }
+
+        // function logic(){
+        // if( logic1 ){
+        //     console.log('YOU WON!!!');
+        // }  else {
+        //     console.log('Computer Won!!');
+        // }
+        //     }
+
+        // for (let i = 0; i < 5; i++){
+        //     logic();
+        // }
+
+        // function playground(){
+        //     if(logic1 == true ){
+        //     console.log(`Match draws `);
+        //     } else if (user1 === 'rock' > comp === 'scissors'){
+        //         console.log(`You won, ${user1} beats ${comp}. `);
+        //     }else if (user1 === 'paper' < comp=== 'rock'){
+        //         console.log(`You won, ${user1} beats ${comp}. `);
+        //     }else if (user1 === 'scissors' > comp === 'paper'){
+        //         console.log(`You won, ${user1} beats ${comp}. `);
+        //     }else if (user1 === 'scissors' < comp === 'rock'){
+        //         console.log(`AI won, ${comp} beats ${user1}. `);
+        //     }else if (user1 === 'rock' > comp === 'paper'){
+        //         console.log(`AI won, ${comp} beats ${user1}. `);
+        //     }else if (user1 === 'scissors' > comp === 'paper'){
+        //         console.log(`AI won, ${comp} beats ${user1}. `);
+        //     }else{
+        //         console.log(`try next time`);
+        //     }    
+        // }
+
+
+
+/*
+        //1   
+        round++;
+        console.log(`Round : ${round}`);
+        alert(`Round : ${round}`);
+        console.log(`Computer : ${computerScore}`);
+        console.log(`Human : ${humanScore}`);
+        playRound(humanSelection, computerSelection);
+
+        //2   
+        round++;
+        console.log(`Round : ${round}`);
+        alert(`Round : ${round}`);
+        console.log(`Computer : ${computerScore}`);
+        console.log(`Human : ${humanScore}`);
+        playRound(humanSelection, computerSelection);
+
+         //3   
+        round++;
+        console.log(`Round : ${round}`);
+        alert(`Round : ${round}`);
+        console.log(`Computer : ${computerScore}`);
+        console.log(`Human : ${humanScore}`);
+        playRound(humanSelection, computerSelection);
+
+ */
+
+
+
+        // playRound(humanSelection, computerSelection);
+        // console.log('----------------------');
+        // human 
+        // human <= 5 you won
+        // computer <= 5 ai won
+
+        // console.log(`${}`);
+
+                // function playGame(){
+        //     for (let i = 0; i < round; i++){
+        //         for (let j = 0; j < i; j++){
+        //             playRound(humanSelection, computerSelection);
+        //         }
+               
+        //     }
+        // }
+
+
+          
+        function play(){
+
+            round++;
+            console.log(`Round : ${round}`);
+            // alert(`Round : ${round}`);
+            // console.log(`user : ${getHumanChoice()}`);
+            console.log(`Computer : ${computerScore}`);
+            console.log(`Human : ${humanScore}`);
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+            playRound(humanSelection, computerSelection);
+            console.log('----------------------');
+            // console.log(`Computer : ${computerScore}`);
+            // console.log(`Human : ${humanScore}`);
+
+        }
