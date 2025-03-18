@@ -1,16 +1,25 @@
 
         // variables 
         let round = 0;
-        const totalRound = 5;    
+        // const totalRound = 5;    
         let humanScore = 0;
         let computerScore = 0;  
         const choices = ['rock', 'paper', 'scissors'];
+
         // console designs and output
         console.log(`Round : ${round}`);
         console.log('----SCORE----');
         console.log(`Computer : ${computerScore}`);
         console.log(`Human : ${humanScore}`);
         console.log('----------------------');
+        // ui designs
+        const scoreBoard = document.querySelector('p');
+        scoreBoard.innerHTML = `Round : ${round} <br> 
+        ----SCORE---- <br> 
+        Computer : ${computerScore} <br> 
+        Human : ${humanScore}  <br> 
+        ----------------------`;
+        const output = document.querySelector('h4')
 
 
         // random number generator
@@ -61,30 +70,46 @@
             console.log(`Round : ${round}`);
             console.log(`Computer : ${computerScore}`);
             console.log(`Human : ${humanScore}`);
+            scoreBoard.innerHTML = `Round : ${round} <br> 
+            ----SCORE---- <br> 
+            Computer : ${computerScore} <br> 
+            Human : ${humanScore}  <br> 
+            ----------------------`;
             const humanSelection = getHumanChoice();
             const computerSelection = getComputerChoice();
             playRound(humanSelection, computerSelection);
             console.log('----------------------');
         }
 
-        // looping the round
-        play();
-        play();
-        play();
-        play();
-        play();
 
-            // if 5 rounds finishes after shows the message
+        // looping the round
+        function playGround(){
+            play();
+            play();
+            play();
+            play();
+            play();
+
             if(humanScore > computerScore){
                 console.log(`----*CONGRATULATIONS!!!----`);
                 console.log(`Computer : ${computerScore}`);
                 console.log(`Human : ${humanScore}`);
                 console.log(`You Won, Score is : ${humanScore}`);
+                output.innerHTML = `----*CONGRATULATIONS!!!---- <br> You Won, Score is : ${humanScore} `
+                output.style.color = 'green';
             }else if(computerScore > humanScore){
                 console.log(`Computer : ${computerScore}`);
                 console.log(`Human : ${humanScore}`);
                 console.log(`ai Won, Score is : ${computerScore}`);
+                output.innerHTML = `----Better Luck Next Time---- <br> Computer Won, Score is : ${computerScore}`;
+                output.style.color = 'red';
             }else{
                 console.log('Match Draws');
+                output.innerHTML = 'Match Draws';
+                output.style.color = 'grey';
             }
-       
+        }
+
+        // click to start the game
+        const btn = document.querySelector('#btn');
+        btn.addEventListener('click',() => playGround());
